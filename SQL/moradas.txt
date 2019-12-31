@@ -1,78 +1,131 @@
-Rua de São Paulo 4700-004 Braga
-Rua de Santo António das Travessas 4700-004 Braga
-Rua de São Geraldo 4700-004 Braga
-Largo de São Paulo 4700-004 Braga
-Rua de São Sebastião 4700-004 Braga
-Rua António Alves Rei Dume 4700-004 Braga
+Rua de Sao Paulo 4700-004 Braga
+Rua de Santo Antonio das Travessas 4700-004 Braga
+Rua de Sao Geraldo 4700-004 Braga
+Largo de Sao Paulo 4700-004 Braga
+Rua de Sao Sebastiao 4700-004 Braga
+Rua Antonio Alves Rei Dume 4700-004 Braga
 Cangosta do Boular 4700-004 Braga
 Rua da Carcamije Dume 4700-004 Braga
 Rua Almada Negreiros Dume 4700-004 Braga
-Rua de São Lourenço da Ordem 4700-004 Braga
+Rua de Sao Lourenco da Ordem 4700-004 Braga
 Rua Fernando Pessoa Dume 4700-004 Braga
-Rua Cândido dos Reis 4700-004 Braga
-Rua João de Deus 4700-004 Braga
-Rua Doutor José Régio Dume 4700-004 Braga
+Rua Candido dos Reis 4700-004 Braga
+Rua Joao de Deus 4700-004 Braga
+Rua Doutor Jose Regio Dume 4700-004 Braga
 Rua Doutor Matias Moura Dume 4700-004 Braga
 Rua Bernardim Ribeiro Dume 4700-004 Braga
-Rua João Penha 4700-004 Braga
-Rua António Aleixo Dume 4700-004 Braga
-Rua Vitorino Nemésio Dume 4700-004 Braga
+Rua Joao Penha 4700-004 Braga
+Rua Antonio Aleixo Dume 4700-004 Braga
+Rua Vitorino Nemesio Dume 4700-004 Braga
 Rua Pedreiro de Macedo Dume 4700-004 Braga
 Rua Paulo Vi 4700-004 Braga
 Rua da Pedreira 4700-004 Braga
 Rua de Cabanas Dume 4700-004 Braga
 Rua do Assento Dume 4700-004 Braga
 Rua Francisco Augusto Alvim 4700-004 Braga
-Calçada de São Martinho Real 4700-004 Braga
-Rua Quinta de Cabanas São Vicente 4700-004 Braga
-Rua Carlos Paião 4700-004 Braga
+Calcada de Sao Martinho Real 4700-004 Braga
+Rua Quinta de Cabanas Sao Vicente 4700-004 Braga
+Rua Carlos Paiao 4700-004 Braga
 Caminho do Carvalhedo 4700-005 Braga
 Caminho de Casas Novas Dume 4700-005 Braga
 Largo de Carcavelos Dume 4700-005 Braga
 Rua do Carvalhal Dume 4700-005 Braga
-Rua Cónego Insuelas Dume 4700-005 Braga
+Rua Conego Insuelas Dume 4700-005 Braga
 Rua do Cordeiro Dume 4700-005 Braga
 Rua de Entre-Portas Dume 4700-005 Braga
 Lugar do Pinhel 4700-005 Braga
 Travessa Cimo de Vila Dume 4700-005 Braga
-Rua Doutor Manuel José de Oliveira Machado Dume 4700-005 Braga
+Rua Doutor Manuel Jose de Oliveira Machado Dume 4700-005 Braga
 Travessa do Cruzeiro Dume 4700-005 Braga
 Lugar Cimo de Vila 4700-005 Braga
 Cangosta do Ruivo Dume 4700-005 Braga
 Largo da Confeiteira Dume 4700-005 Braga
 Estrada Nacional 101 Dume 4700-005 Braga
-Rotunda Bernardino Machado Antas 4760-001 Vila Nova de Famalicão
-Avenida General Humberto Delgado Antas 4760-001 Vila Nova de Famalicão
-Rua António Ferreira de Matos Antas 4760-001 Vila Nova de Famalicão
-Rua Mário Cesariny 4760-001 Vila Nova de Famalicão
-Travessa 1º de Maio Antas 4760-001 Vila Nova de Famalicão
-Rua 1º de Maio Antas 4760-001 Vila Nova de Famalicão
-Rua 8 de Dezembro Antas 4760-001 Vila Nova de Famalicão
-Rua António Dias de Azevedo Antas 4760-001 Vila Nova de Famalicão
-Avenida Rebelo Mesquita Antas 4760-001 Vila Nova de Famalicão
-Praceta do Surrealismo 4760-001 Vila Nova de Famalicão
-Travessa General Humberto Delgado Antas 4760-001 Vila Nova de Famalicão
-Avenida do Brasil Antas 4760-001 Vila Nova de Famalicão
-Avenida dos Descobrimentos Antas 4760-001 Vila Nova de Famalicão
-Avenida Rebelo Mesquita Calendário 4760-001 Vila Nova de Famalicão
-Avenida dos Descobrimentos Calendário 4760-001 Vila Nova de Famalicão
-Avenida do Brasil Gavião 4760-001 Vila Nova de Famalicão
+Rotunda Bernardino Machado Antas 4760-001 Vila Nova de Famalicao
+Avenida General Humberto Delgado Antas 4760-001 Vila Nova de Famalicao
+Rua Antonio Ferreira de Matos Antas 4760-001 Vila Nova de Famalicao
+Rua Mario Cesariny 4760-001 Vila Nova de Famalicao
+Travessa 1 de Maio Antas 4760-001 Vila Nova de Famalicao
+Rua 1 de Maio Antas 4760-001 Vila Nova de Famalicao
+Rua 8 de Dezembro Antas 4760-001 Vila Nova de Famalicao
+Rua Antonio Dias de Azevedo Antas 4760-001 Vila Nova de Famalicao
+Avenida Rebelo Mesquita Antas 4760-001 Vila Nova de Famalicao
+Praceta do Surrealismo 4760-001 Vila Nova de Famalicao
+Travessa General Humberto Delgado Antas 4760-001 Vila Nova de Famalicao
+Avenida do Brasil Antas 4760-001 Vila Nova de Famalicao
+Avenida dos Descobrimentos Antas 4760-001 Vila Nova de Famalicao
+Avenida Rebelo Mesquita Calendario 4760-001 Vila Nova de Famalicao
+Avenida dos Descobrimentos Calendario 4760-001 Vila Nova de Famalicao
+Avenida do Brasil Gaviao 4760-001 Vila Nova de Famalicao
 Lugar do Crasto 4700-008 Braga
 Lugar da Ordem 4700-008 Braga
 Caminho da Ponte de Sobre - Moure Dume 4700-008 Braga
-Avenida 1º de Maio Dume 4700-008 Braga
-Rua do Rêgo Dume 4700-008 Braga
-Travessa do Rêgo 4700-008 Braga
+Avenida 1 de Maio Dume 4700-008 Braga
+Rua do Rego Dume 4700-008 Braga
+Travessa do Rego 4700-008 Braga
 Largo de Remelhe Dume 4700-008 Braga
 Praceta Joaquim Chaves 4700-008 Braga
 Rua de Remelhe Dume 4700-008 Braga
-Largo do Rêgo Dume 4700-008 Braga
-Rua de São Frutuoso ( Bispo de Dume ) 4700-008 Braga
-Rua de São Rosendo ( Bispo de Dume ) Dume 4700-008 Braga
-Largo de São Martinho Dume 4700-008 Braga
-Largo de São Sebastião 4700-008 Braga
-Rua de São Martinho Dume 4700-008 Braga
+Largo do Rego Dume 4700-008 Braga
+Rua de Sao Frutuoso ( Bispo de Dume ) 4700-008 Braga
+Rua de Sao Rosendo ( Bispo de Dume ) Dume 4700-008 Braga
+Largo de Sao Martinho Dume 4700-008 Braga
+Largo de Sao Sebastiao 4700-008 Braga
+Rua de Sao Martinho Dume 4700-008 Braga
 Lugar de Senra 4700-008 Braga
-Avenida do Cávado Dume 4700-008 Braga
-Avenida do Cávado 4700-008 Braga
-Travessa 1º de Maio 4700-008 Braga
+Avenida do Cavado Dume 4700-008 Braga
+Avenida do Cavado 4700-008 Braga
+Travessa 1 de Maio 4700-008 Braga
+Rua Dona Teresa Aldao 4800-004 Guimaraes
+Rua de Francos Azurem 4800-004 Guimaraes
+Rua Francisco Teixeira Azurem 4800-004 Guimaraes
+Rua Ferreira de Castro Azurem 4800-004 Guimaraes
+Rua da Gloria Azurem 4800-004 Guimaraes
+Rua de Goa Azurem 4800-004 Guimaraes
+Rua Joao Goncalves 4800-004 Guimaraes
+Rua Jose Albino Costa e Silva Azurem 4800-004 Guimaraes
+Rua Doutor Joao Afonso Almeida Azurem 4800-004 Guimaraes
+Rua da Calcada Padre Jose Fernandes Ribeiro Azurem 4800-004 Guimaraes
+Rua Doutor Mario Dias Azurem 4800-004 Guimaraes
+Rua Sem Nome 7050 Azurem 4800-004 Guimaraes
+Praceta Padre Luis Gonzaga Azurem 4800-004 Guimaraes
+Rua Francisco Ribeiro de Castro Azurem 4800-004 Guimaraes
+Praceta do Viajante Azurem 4800-004 Guimaraes
+Travessa Veiga de Fora Fermentoes 4800-004 Guimaraes
+Rua do Campo das Cartas Fermentoes 4800-004 Guimaraes
+Rua da Veiga de Fora Fermentoes 4800-004 Guimaraes
+Avenida Central 4775-001 Cambeses
+Rua dos Azevinhos 4775-001 Cambeses
+Rua do Bairro 4775-001 Cambeses
+Rua de Bouco 4775-001 Cambeses
+Rua do Regedor 4775-001 Cambeses
+Rua do Souto 4775-001 Cambeses
+Praca da Autarquia 4775-001 Cambeses
+Rua da Ponte de Pau 4775-001 Cambeses
+Caminho de Fontelas 4775-001 Cambeses
+Rua 25 de Abril 4775-001 Cambeses
+Rua do Senhor da Cruz 4775-001 Cambeses
+Rua do Brasil 4775-001 Cambeses
+Rua da Carreira 4775-001 Cambeses
+Travessa da Carreira 4775-001 Cambeses
+Travessa das Chaos 4775-001 Cambeses
+Praceta das Chaos 4775-001 Cambeses
+Travessa da Bela Vista 4775-001 Cambeses
+Rua Jose Antonio Gomes Santos 4775-001 Cambeses
+Rua do Cortinhal 4775-001 Cambeses
+Rua do Carvalhal 4775-001 Cambeses
+Praca dos Combatentes 4775-001 Cambeses
+Rua do Real 4705-001 Arentim
+Calcada de Gondomar 4705-001 Arentim
+Rua de Sao Joao 4705-001 Arentim
+Rua da Liberdade 4705-001 Arentim
+Travessa das Oliveiras 4705-001 Arentim
+Rua da Cangosta 4705-001 Arentim
+Rua de Pecelar 4705-001 Arentim
+Rua da Igreja Velha 4705-001 Arentim
+Rua da Barroca 4705-001 Arentim
+Rua Monte de Baixo 4705-001 Arentim
+Rua dos Caixoteiros 4705-001 Arentim
+Rua da Ponte Seca 4705-001 Arentim
+Rua Comendador Padre David de Oliveira Martins 4705-001 Arentim
+Rua Jose da Carolina 4705-001 Arentim

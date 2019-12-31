@@ -1,6 +1,7 @@
 import json
 import random
 import datetime
+import unidecode
 
 sgnomes = json.loads(open('UltimosNomes.json').read())
 
@@ -71,13 +72,19 @@ def genMedico():
     nasc = genDataNasc("Medico")
     esp = random.choice(Especialidades)
 
+
+    fmorada = random.choice(Moradas)
+    rua = fmorada[0:fmorada.index('4')]
+    cp = fmorada[fmorada.index('4'):fmorada.index('4') + 8]
+
     medi = {
         "Nome" : nome,
         "Genero" : genero,
         "DataNasc" : nasc,
         "Especialidade": Especialidades.index(esp)+1,
         "Email": geramail(nome,nasc),
-        "Morada":random.choice(Moradas), #randomLoc(extm,extmax),
+        "Morada":rua, #randomLoc(extm,extmax),
+        "CP": cp,
         "Tlm": genTel()
     }
     return medi
@@ -93,13 +100,19 @@ def genAtleta():
     nasc = genDataNasc("NotMedico")
     esp = random.choice(Modalidades)
 
+    fmorada = random.choice(Moradas)
+    rua = fmorada[0:fmorada.index('4')]
+    cp = fmorada[fmorada.index('4'):fmorada.index('4') + 8]
+
+
     atl = {
         "Nome" : nome,
         "Genero" : genero,
         "DataNasc" : nasc,
         "Modalidade": Modalidades.index(esp),
         "Email": geramail(nome,nasc),
-        "Morada": random.choice(Moradas)  , #randomLoc(extm,extmax),
+        "Morada": rua,
+        "CP": cp,
         "Tlm": genTel()
     }
     return atl
@@ -111,7 +124,16 @@ extmax = [41.471613, -8.577188]
 medicos = []
 atletas = []
 consultas = []
+moradacache= []
+for fmorada in Moradas:
 
+    cp = fmorada[fmorada.index('4'):fmorada.index('4') + 8]
+    localidade = fmorada[fmorada.index('4') + 9::]
+
+    if cp not in moradacache:
+        print("INSERT INTO projetobd.Codigo_Postal VALUES ('{0}','{1}');".format(cp,localidade))
+        moradacache.append(cp)
+print('\n')
 for i in range(len(Modalidades)):
     if i < 4:
         categoria = "Aquatico"
@@ -128,22 +150,23 @@ for i in range(len(Modalidades)):
     else:
         categoria = "Individual"
 
-    print("INSERT INTO clinica.Modalidade VALUES ({0},'{1}','{2}');".format(i+1,Modalidades[i],categoria))
-
+    print("INSERT INTO projetobd.Modalidade VALUES ({0},'{1}','{2}');".format(i+1,Modalidades[i],categoria))
+print('\n')
 for i in range(len(Especialidades)):
-    print("INSERT INTO clinica.Especialidade VALUES ({0},'{1}');".format(i+1,Especialidades[i]))
+    print("INSERT INTO projetobd.Especialidade VALUES ({0},'{1}');".format(i+1,Especialidades[i]))
 
 
 
-
+print('\n')
 for i in range(15):
     medico = genMedico()
     medicos.append(medico)
-    print("INSERT INTO clinica.MedicoResponsavel VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7});".format(medico["Nome"],medico["Morada"],medico["DataNasc"],random.randint(1,len(Especialidades)),medico["Genero"],medico["Tlm"],medico["Email"],i+1))
+    print("INSERT INTO projetobd.MedicoResponsavel VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},'{8}');".format(medico["Nome"],medico["Morada"],medico["DataNasc"],random.randint(1,len(Especialidades)),medico["Genero"],medico["Tlm"],medico["Email"],i+1,medico["CP"]))
 
+print('\n')
 for i in range(45):
     atleta = genAtleta()
     atletas.append(atleta)
-    print("INSERT INTO clinica.Atleta VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},{8});".format(atleta["Nome"],atleta["Morada"],atleta["DataNasc"],random.randint(1,len(Modalidades)),atleta["Genero"],atleta["Tlm"],atleta["Email"],i+1,random.randint(1,len(medicos))))
+    print("INSERT INTO projetobd.Atleta VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},{8},'{9}');".format(atleta["Nome"],atleta["Morada"],atleta["DataNasc"],random.randint(1,len(Modalidades)),atleta["Genero"],atleta["Tlm"],atleta["Email"],i+1,random.randint(1,len(medicos)),atleta['CP']))
 
 
