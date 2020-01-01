@@ -1,7 +1,7 @@
 import json
 import random
 import datetime
-import unidecode
+
 
 sgnomes = json.loads(open('UltimosNomes.json').read())
 
@@ -24,6 +24,8 @@ with open("moradas.txt", 'r') as fh:
 Modalidades = ["Nado sincronizado","Natação","Polo aquático","Saltos ornamentais","Corrida","Salto em Comprimento","Salto em Altura","Triplo Salto","Basketball","Futebol","Handebol","Artistica","Ritmica","Trampolim","Disco","Martelo","Dardo","Ciclismo","Canoagem","Boxe","Esgrima","Tenis"]
 
 Especialidades = ["Psicologia", "Fisioterapia", "Ortopedia", "Oftaumologia", "Neurologia", "Clinica Geral"]
+consultas = [["Exame Biométrico",2,5],["Exame Ectostópico",6],["Avaliação das Capacidades Motoras",5,1],["Exame Oftalmologico",4],["Exame Otológico",6],["Recuperação de Lesão",2,3,5,6],["Exame Fisico",2]]
+
 
 def genDataNasc(tipo):
     if tipo == "Medico":
@@ -60,6 +62,33 @@ def geramail(nome,data):
 def genTel():
     tlm = ["91","93","96"]
     return random.choice(tlm) + str(random.randint(1000000,9999999))
+
+
+
+def genConsulta():
+    atleta = random.choice(atletas)
+
+    preco = random.uniform(30.0,60.0)
+
+    if atleta["DataNasc"].year < 1996:
+        preco *= 0.8
+
+    dataMarc = (datetime.datetime.now() - datetime.timedelta(days=random.randint(1,538))).replace(hour=0,minute=0,microsecond=0) + datetime.timedelta(seconds=random.randint(9*3600,19*3600))
+
+    consulta = random.choice(consultas)
+
+    consultar = {
+        "Preco" : round(preco,2),
+        "Designacao" : consulta[0],
+        "DataMarcacao" : dataMarc,
+        "DataRealizacao": dataMarc.replace(hour=0,minute=0,second=0,microsecond=0) + datetime.timedelta(days=random.randint(0,60),hours=random.randint(9,18),minutes=random.choice([0,15,30,45])),
+        "Especialidade": random.choice(consulta[1::]),
+        "Atleta" : atletas.index(atleta)+1
+    }
+    return consultar
+
+
+
 
 def genMedico():
     if random.randint(0,100) < 50:
@@ -117,13 +146,32 @@ def genAtleta():
     }
     return atl
 
+def genSecretaria():
+    if random.randint(0,100) < 50:
+        nome = "{0} {1}".format(random.choice(macho),random.choice(sgnomes))
+        genero = 'M'
+    else:
+        nome = "{0} {1}".format(random.choice(femea),random.choice(sgnomes))
+        genero = 'F'
+
+
+
+
+    Sec = {
+        "Nome" : nome,
+        "Genero" : genero,
+        "Email" : geramail(nome,genDataNasc("NotMedico")),
+        "Tlm": genTel()
+    }
+    return Sec
+
 extm = [41.617503, -8.343968]
 extmax = [41.471613, -8.577188]
 
 
 medicos = []
 atletas = []
-consultas = []
+secs = []
 moradacache= []
 for fmorada in Moradas:
 
@@ -158,15 +206,28 @@ for i in range(len(Especialidades)):
 
 
 print('\n')
-for i in range(15):
+for i in range(20):
     medico = genMedico()
     medicos.append(medico)
     print("INSERT INTO projetobd.MedicoResponsavel VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},'{8}');".format(medico["Nome"],medico["Morada"],medico["DataNasc"],random.randint(1,len(Especialidades)),medico["Genero"],medico["Tlm"],medico["Email"],i+1,medico["CP"]))
 
 print('\n')
-for i in range(45):
+for i in range(650):
     atleta = genAtleta()
     atletas.append(atleta)
     print("INSERT INTO projetobd.Atleta VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},{8},'{9}');".format(atleta["Nome"],atleta["Morada"],atleta["DataNasc"],random.randint(1,len(Modalidades)),atleta["Genero"],atleta["Tlm"],atleta["Email"],i+1,random.randint(1,len(medicos)),atleta['CP']))
+
+print('\n')
+for i in range(3):
+    sec = genSecretaria()
+    secs.append(sec)
+    print("INSERT INTO projetobd.Secretaria VALUES ('{0}',{1},{2},'{3}','{4}');".format(sec["Nome"],i+1,sec["Tlm"],sec['Email'],sec["Genero"]))
+
+print('\n')
+for i in range(1500):
+    con = genConsulta()
+    print("INSERT INTO projetobd.Teste_Clinico VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7});".format(con["Preco"],con["Designacao"],con['DataMarcacao'],con['DataRealizacao'],i+1,con["Atleta"],random.randint(1,len(secs)),con["Especialidade"]))
+
+
 
 

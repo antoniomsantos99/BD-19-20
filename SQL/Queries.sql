@@ -1,2 +1,2 @@
 select * from Atleta
-where idade(DataNascimento) < 24
+where idade(DataNascimento) < 24;
