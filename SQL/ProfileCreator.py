@@ -22,7 +22,7 @@ with open("moradas.txt", 'r') as fh:
 
 
 Modalidades = ["Nado sincronizado","Natação","Polo aquático","Saltos ornamentais","Corrida","Salto em Comprimento","Salto em Altura","Triplo Salto","Basketball","Futebol","Handebol","Artistica","Ritmica","Trampolim","Disco","Martelo","Dardo","Ciclismo","Canoagem","Boxe","Esgrima","Tenis"]
-
+Equipamento = [["Raio X", 5500],["Balança",200],["Passadeira Elétrica",700],["Otoscopio",100],["Estetoscopio",75]]
 Especialidades = ["Psicologia", "Fisioterapia", "Ortopedia", "Oftaumologia", "Neurologia", "Clinica Geral"]
 consultas = [["Exame Biométrico",2,5],["Exame Ectostópico",6],["Avaliação das Capacidades Motoras",5,1],["Exame Oftalmologico",4],["Exame Otológico",6],["Recuperação de Lesão",2,3,5,6],["Exame Fisico",2]]
 
@@ -67,6 +67,8 @@ def genTel():
 
 def genConsulta():
     atleta = random.choice(atletas)
+    secretaria = random.choice(secs)
+    tecnico = random.choice(tecs)
 
     preco = random.uniform(30.0,60.0)
 
@@ -74,6 +76,9 @@ def genConsulta():
         preco *= 0.8
 
     dataMarc = (datetime.datetime.now() - datetime.timedelta(days=random.randint(1,538))).replace(hour=0,minute=0,microsecond=0) + datetime.timedelta(seconds=random.randint(9*3600,19*3600))
+
+    while dataMarc<tecnico["InicioServico"] or dataMarc<tecnico["InicioServico"] or dataMarc<atleta["Medico"]["InicioServico"]:
+            dataMarc = (datetime.datetime.now() - datetime.timedelta(days=random.randint(1,538))).replace(hour=0,minute=0,microsecond=0) + datetime.timedelta(seconds=random.randint(9*3600,19*3600))
 
     consulta = random.choice(consultas)
 
@@ -83,7 +88,9 @@ def genConsulta():
         "DataMarcacao" : dataMarc,
         "DataRealizacao": dataMarc.replace(hour=0,minute=0,second=0,microsecond=0) + datetime.timedelta(days=random.randint(0,60),hours=random.randint(9,18),minutes=random.choice([0,15,30,45])),
         "Especialidade": random.choice(consulta[1::]),
-        "Atleta" : atletas.index(atleta)+1
+        "Atleta" : atletas.index(atleta)+1,
+        "Secretaria": secretaria,
+        "Tecnico": tecnico
     }
     return consultar
 
@@ -105,6 +112,7 @@ def genMedico():
     fmorada = random.choice(Moradas)
     rua = fmorada[0:fmorada.index('4')]
     cp = fmorada[fmorada.index('4'):fmorada.index('4') + 8]
+    dataInicio = (datetime.datetime.now() - datetime.timedelta(days=random.randint(15,538))).replace(hour=0,minute=0,microsecond=0)
 
     medi = {
         "Nome" : nome,
@@ -114,7 +122,8 @@ def genMedico():
         "Email": geramail(nome,nasc),
         "Morada":rua, #randomLoc(extm,extmax),
         "CP": cp,
-        "Tlm": genTel()
+        "Tlm": genTel(),
+        "InicioServico": dataInicio
     }
     return medi
 
@@ -142,7 +151,8 @@ def genAtleta():
         "Email": geramail(nome,nasc),
         "Morada": rua,
         "CP": cp,
-        "Tlm": genTel()
+        "Tlm": genTel(),
+        "Medico": random.choice(medicos)
     }
     return atl
 
@@ -154,14 +164,13 @@ def genSecretaria():
         nome = "{0} {1}".format(random.choice(femea),random.choice(sgnomes))
         genero = 'F'
 
-
-
-
+    dataInicio = (datetime.datetime.now() - datetime.timedelta(days=random.randint(15,538))).replace(hour=0,minute=0,microsecond=0)
     Sec = {
         "Nome" : nome,
         "Genero" : genero,
         "Email" : geramail(nome,genDataNasc("NotMedico")),
-        "Tlm": genTel()
+        "Tlm": genTel(),
+        "InicioServico": dataInicio
     }
     return Sec
 
@@ -202,32 +211,44 @@ for i in range(len(Modalidades)):
 print('\n')
 for i in range(len(Especialidades)):
     print("INSERT INTO projetobd.Especialidade VALUES ({0},'{1}');".format(i+1,Especialidades[i]))
-
+p = 0
+for i in range(len(Equipamento)):
+    for c in range(random.randint(2,5)):
+        print("INSERT INTO projetobd.EquipamentoClinico VALUES ({0},'{1}',{2});".format(p+1,Equipamento[i][0],Equipamento[i][1]))
+        p+=1
 
 
 print('\n')
 for i in range(20):
     medico = genMedico()
     medicos.append(medico)
-    print("INSERT INTO projetobd.MedicoResponsavel VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},'{8}');".format(medico["Nome"],medico["Morada"],medico["DataNasc"],random.randint(1,len(Especialidades)),medico["Genero"],medico["Tlm"],medico["Email"],i+1,medico["CP"]))
+    print("INSERT INTO projetobd.Medico VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},'{8}','{9}');".format(medico["Nome"],medico["Morada"],medico["DataNasc"],random.randint(1,len(Especialidades)),medico["Genero"],medico["Tlm"],medico["Email"],i+1,medico["CP"],medico["InicioServico"].date()))
 
 print('\n')
-for i in range(650):
+for i in range(75):
     atleta = genAtleta()
     atletas.append(atleta)
-    print("INSERT INTO projetobd.Atleta VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},{8},'{9}');".format(atleta["Nome"],atleta["Morada"],atleta["DataNasc"],random.randint(1,len(Modalidades)),atleta["Genero"],atleta["Tlm"],atleta["Email"],i+1,random.randint(1,len(medicos)),atleta['CP']))
+    print("INSERT INTO projetobd.Atleta VALUES ('{0}','{1}','{2}',{3},'{4}',{5},'{6}',{7},{8},'{9}');".format(atleta["Nome"],atleta["Morada"],atleta["DataNasc"],random.randint(1,len(Modalidades)),atleta["Genero"],atleta["Tlm"],atleta["Email"],i+1,medicos.index(atleta["Medico"])+1,atleta['CP']))
 
 print('\n')
 for i in range(3):
     sec = genSecretaria()
     secs.append(sec)
-    print("INSERT INTO projetobd.Secretaria VALUES ('{0}',{1},{2},'{3}','{4}');".format(sec["Nome"],i+1,sec["Tlm"],sec['Email'],sec["Genero"]))
+    print("INSERT INTO projetobd.Secretaria VALUES ('{0}',{1},{2},'{3}','{4}','{5}');".format(sec["Nome"],i+1,sec["Tlm"],sec['Email'],sec["InicioServico"].date(),sec["Genero"]))
+tecs = []
+for i in range(20):
+    sec = genSecretaria()
+    tecs.append(sec)
+    print("INSERT INTO projetobd.Tecnico VALUES ('{0}',{1},{2},'{3}','{4}','{5}');".format(sec["Nome"],i+1,sec["Tlm"],sec['Email'],sec["InicioServico"].date(),sec["Genero"]))
 
 print('\n')
-for i in range(1500):
+d=0
+for i in range(430):
     con = genConsulta()
-    print("INSERT INTO projetobd.Teste_Clinico VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7});".format(con["Preco"],con["Designacao"],con['DataMarcacao'],con['DataRealizacao'],i+1,con["Atleta"],random.randint(1,len(secs)),con["Especialidade"]))
-
+    print("INSERT INTO projetobd.Teste_Clinico VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7},{8});".format(con["Preco"],con["Designacao"],con['DataMarcacao'],con['DataRealizacao'],i+1,con["Atleta"],secs.index(con["Secretaria"])+1,con["Especialidade"],tecs.index(con["Tecnico"])+1))
+    while random.randint(1,100) > 70:
+        print("INSERT INTO projetobd.UsoEquipamento VALUES ({0},{1},{2});".format(d+1,i+1,random.randint(1,p)))
+        d+=1
 
 
 
