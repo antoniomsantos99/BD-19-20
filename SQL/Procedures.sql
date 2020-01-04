@@ -64,7 +64,7 @@ DELIMITER ;
 
 #Quantia gerada, em euros, em testes num dado mês
 DELIMITER //
-CREATE PROCEDURE receitaGeradaMes(Id int)
+CREATE PROCEDURE receitaGeradaMes(Mes int, Ano int)
    BEGIN
 		select sum(Preço) from Teste_Clinico where month(DataRealizacao) = Mes and year(DataRealizacao) = Ano;
 	END
