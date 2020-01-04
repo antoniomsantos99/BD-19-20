@@ -1,5 +1,7 @@
+#Atletas com menos de 24 anos
 select * from Atleta
 where idade(DataNascimento) < 24;
 
-select * from Atleta a, Modalidade m
-where a.Modalidade = m.idModalidade and Categoria = 'Atletismo'
+select * from Atleta;
+
+call AtletaFromTlm(968475085)
