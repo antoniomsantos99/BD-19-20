@@ -1,0 +1,22 @@
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656e5"},"Categoria":"Aquatico","Designacao":"Nado sincronizado","idModalidade":{"$numberInt":"1"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656e6"},"Categoria":"Aquatico","Designacao":"Natação","idModalidade":{"$numberInt":"2"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656e7"},"Categoria":"Aquatico","Designacao":"Polo aquático","idModalidade":{"$numberInt":"3"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656e8"},"Categoria":"Aquatico","Designacao":"Saltos ornamentais","idModalidade":{"$numberInt":"4"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656e9"},"Categoria":"Atletismo","Designacao":"Corrida","idModalidade":{"$numberInt":"5"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ea"},"Categoria":"Atletismo","Designacao":"Salto em Comprimento","idModalidade":{"$numberInt":"6"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656eb"},"Categoria":"Atletismo","Designacao":"Salto em Altura","idModalidade":{"$numberInt":"7"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ec"},"Categoria":"Atletismo","Designacao":"Triplo Salto","idModalidade":{"$numberInt":"8"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ed"},"Categoria":"Equipa","Designacao":"Basketball","idModalidade":{"$numberInt":"9"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ee"},"Categoria":"Equipa","Designacao":"Futebol","idModalidade":{"$numberInt":"10"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ef"},"Categoria":"Equipa","Designacao":"Handebol","idModalidade":{"$numberInt":"11"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f0"},"Categoria":"Ginastica","Designacao":"Artistica","idModalidade":{"$numberInt":"12"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f1"},"Categoria":"Ginastica","Designacao":"Ritmica","idModalidade":{"$numberInt":"13"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f2"},"Categoria":"Ginastica","Designacao":"Trampolim","idModalidade":{"$numberInt":"14"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f3"},"Categoria":"Lancamento","Designacao":"Disco","idModalidade":{"$numberInt":"15"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f4"},"Categoria":"Lancamento","Designacao":"Martelo","idModalidade":{"$numberInt":"16"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f5"},"Categoria":"Lancamento","Designacao":"Dardo","idModalidade":{"$numberInt":"17"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f6"},"Categoria":"Corrida","Designacao":"Ciclismo","idModalidade":{"$numberInt":"18"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f7"},"Categoria":"Corrida","Designacao":"Canoagem","idModalidade":{"$numberInt":"19"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f8"},"Categoria":"Individual","Designacao":"Boxe","idModalidade":{"$numberInt":"20"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656f9"},"Categoria":"Individual","Designacao":"Esgrima","idModalidade":{"$numberInt":"21"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656fa"},"Categoria":"Individual","Designacao":"Tenis","idModalidade":{"$numberInt":"22"}}
