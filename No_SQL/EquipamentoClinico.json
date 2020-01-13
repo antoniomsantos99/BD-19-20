@@ -1,0 +1,14 @@
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656bd"},"Designacao":"Raio X","idEquipamentoClinico":{"$numberInt":"1"},"Preco":{"$numberInt":"5500"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656be"},"Designacao":"Raio X","idEquipamentoClinico":{"$numberInt":"2"},"Preco":{"$numberInt":"5500"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656bf"},"Designacao":"Raio X","idEquipamentoClinico":{"$numberInt":"3"},"Preco":{"$numberInt":"5500"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c0"},"Designacao":"Balança","idEquipamentoClinico":{"$numberInt":"4"},"Preco":{"$numberInt":"200"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c1"},"Designacao":"Balança","idEquipamentoClinico":{"$numberInt":"5"},"Preco":{"$numberInt":"200"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c2"},"Designacao":"Balança","idEquipamentoClinico":{"$numberInt":"6"},"Preco":{"$numberInt":"200"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c3"},"Designacao":"Passadeira Elétrica","idEquipamentoClinico":{"$numberInt":"7"},"Preco":{"$numberInt":"700"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c4"},"Designacao":"Passadeira Elétrica","idEquipamentoClinico":{"$numberInt":"8"},"Preco":{"$numberInt":"700"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c5"},"Designacao":"Otoscopio","idEquipamentoClinico":{"$numberInt":"9"},"Preco":{"$numberInt":"100"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c6"},"Designacao":"Otoscopio","idEquipamentoClinico":{"$numberInt":"10"},"Preco":{"$numberInt":"100"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c7"},"Designacao":"Otoscopio","idEquipamentoClinico":{"$numberInt":"11"},"Preco":{"$numberInt":"100"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c8"},"Designacao":"Otoscopio","idEquipamentoClinico":{"$numberInt":"12"},"Preco":{"$numberInt":"100"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656c9"},"Designacao":"Estetoscopio","idEquipamentoClinico":{"$numberInt":"13"},"Preco":{"$numberInt":"75"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ca"},"Designacao":"Estetoscopio","idEquipamentoClinico":{"$numberInt":"14"},"Preco":{"$numberInt":"75"}}

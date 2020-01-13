@@ -64,7 +64,7 @@ DELIMITER ;
 
 #Quantia gerada, em euros, em testes num dado mês
 DELIMITER //
-CREATE PROCEDURE receitaGeradaMes(Id int)
+CREATE PROCEDURE receitaGeradaMes(Mes int, Ano int)
    BEGIN
 		select sum(Preço) from Teste_Clinico where month(DataRealizacao) = Mes and year(DataRealizacao) = Ano;
 	END
@@ -92,10 +92,27 @@ CREATE PROCEDURE countNovosMes(Id int)
     //
 DELIMITER ;
 
+#Todos os atletas com nome
+DELIMITER //
+CREATE PROCEDURE AtletasComNome(nome varchar(100))
+   BEGIN
+		select * from atleta a
+        where a.Nome like concat(nome,'%');
+	END
+    //
+DELIMITER ;
+
+#Devolve atleta com numero de telemovel
+DELIMITER //
+CREATE PROCEDURE AtletaFromTlm(tlm int)
+   BEGIN
+		select * from atleta a
+        where a.NumeroTelemovel = tlm;
+	END
+    //
+DELIMITER ;
 
 
-
-    
 
 
 

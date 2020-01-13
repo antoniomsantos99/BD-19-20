@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656cb"},"Designacao":"Psicologia","idEspecialidade":{"$numberInt":"1"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656cc"},"Designacao":"Fisioterapia","idEspecialidade":{"$numberInt":"2"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656cd"},"Designacao":"Ortopedia","idEspecialidade":{"$numberInt":"3"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656ce"},"Designacao":"Oftaumologia","idEspecialidade":{"$numberInt":"4"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656cf"},"Designacao":"Neurologia","idEspecialidade":{"$numberInt":"5"}}
+{"_id":{"$oid":"5e10e698f5e8f41a1cb656d0"},"Designacao":"Clinica Geral","idEspecialidade":{"$numberInt":"6"}}
