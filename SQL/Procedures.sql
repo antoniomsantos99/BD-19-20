@@ -48,7 +48,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE sumPrecoAtleta(Id int)
    BEGIN
-		select sum(Preço) from Teste_Clinico where Atleta_ID = Id and DataRealizacao < CURRENT_TIMESTAMP();
+		select sum(Preco) from Teste_Clinico where Atleta_ID = Id and DataRealizacao < CURRENT_TIMESTAMP();
 	END
     //
 DELIMITER ;
@@ -66,7 +66,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE receitaGeradaMes(Mes int, Ano int)
    BEGIN
-		select sum(Preço) from Teste_Clinico where month(DataRealizacao) = Mes and year(DataRealizacao) = Ano;
+		select sum(Preco) from Teste_Clinico where month(DataRealizacao) = Mes and year(DataRealizacao) = Ano;
 	END
     //
 DELIMITER ;
