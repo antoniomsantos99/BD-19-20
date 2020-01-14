@@ -1,0 +1,12 @@
+call consultasfromsecretaria(1);
+call atletasFromMedico(1);
+call consultasFromAtleta(1);
+call consultasFuturasFromAtleta(1);
+call consultasFromEsp(1);
+call sumPrecoAtleta(1);
+call consultasRealizadasMes(1, 2019);
+call receitaGeradaMes(7, 2019);
+call consultasFromMedAndMod(1,1);
+call countNovosMes(7);
+call AtletasComNome("Martim");
+call AtletaFromTlm(9300000);
