@@ -6,19 +6,21 @@ where idade(DataNascimento) < 24;
 select * from Atleta
 where genero = 'M';
 
-#Atletas de Braga
-select * from atleta a
+#Atletas de Braga 
+select * from Atleta a
 where a.CodigoPostal in(
-select c.codigo_postal from codigo_postal c
+select c.codigo_postal from Codigo_Postal c
 where Localidade ='Braga');
 
 #Atletas que nunca foram consultados
-select a.ID_Atleta, a.Nome from atleta a
+select a.ID_Atleta, a.Nome from Atleta a
 where a.ID_Atleta not in(
-	select a.ID_Atleta from teste_clinico c
-    where a.ID_Atleta = c.Atleta_ID_Atleta and c.DataRealizacao < now());
+	select a.ID_Atleta from Teste_Clinico c
+    where a.ID_Atleta = c.Atleta_ID and c.DataRealizacao < now());
 
 #Equipamento mais utilizados por ordem
-select e.Designacao,e.idEquipamentoClinico,(select count(*) from usoequipamento u where e.idEquipamentoClinico = u.idEquipamentoClinico) as vezes_usadas 
-from equipamentoclinico e
+select e.Designacao,e.idEquipamentoClinico,(
+	select count(*) from UsoEquipamento u 
+    where e.idEquipamentoClinico = u.idEquipamentoClinico) as vezes_usadas 
+from EquipamentoClinico e
 order by vezes_usadas DESC   
